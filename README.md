@@ -1,8 +1,8 @@
 
 ## How to create app
 
-npx create-react-app my-app
-cd my-app
+### `npx create-react-app my-app`
+### `cd my-app`
 
 ## Available Scripts
 
