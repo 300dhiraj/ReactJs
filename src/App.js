@@ -1,15 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Home from "./Home";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+export default class App extends React.Component {
+  render = () => {
+    return (
+      <Router>
+        <div className="App">
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route path="/" component={Home}></Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  };
 }
-
-export default App;
